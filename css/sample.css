@@ -1,0 +1,197 @@
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 左に寄せる */
+    width: 100vw; /* ビューポート全幅 */
+    height: 100vh; /* ビューポート全高 */
+    position: relative; /* 画像の上にテキストを配置するため */
+    box-sizing: border-box;
+}
+
+/* 画像を画面いっぱいに配置 */
+header .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像が要素内に収まるようにリサイズ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* 画像をテキストの後ろに配置 */
+}
+
+/* ヘッダーのテキスト */
+header h1 {
+    color: #023671;
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1; /* テキストを画像の上に表示 */
+    margin-left: 28px; /* 画像の左側に余白を作る */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* テキストに影をつけて読みやすくする */
+}
+
+.select{
+    display: flex;
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向も中央揃え */
+    text-align: center;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    color: white;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    text-align: center;
+    margin: 0 20px; /* h1と画像の間に少し余白を持たせる */
+}
+
+h2{
+    color: #023671;;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+h3{
+    color: #4281C8;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h4{
+    color: black;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* グラフのコンテナ */
+.graph-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4つのボックスを横並びに */
+    gap: 20px; /* ボックス間の隙間 */
+    justify-items: center; /* 各ボックスの中央揃え */
+    margin-top: 30px;
+}
+
+/* 各グラフとタイトルを入れるボックス */
+.graph-box {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 400px; /* ボックス全体の高さを統一 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* タイトルとグラフを均等に配置 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 各グラフのタイトル */
+.graph-title {
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #023671;
+    margin-bottom: 15px;
+}
+
+/* 各キャンバスに適用されるスタイル */
+.graph-box canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 全体のコンテナ */
+.working-condition-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
+    gap: 20px; /* ボックス間の隙間 */
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* 各指標をボックスに入れる */
+.working-condition-box {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px; /* ボックスの高さを揃える */
+}
+
+/* 各指標のタイトル */
+.condition-title {
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #023671;
+    margin-bottom: 10px;
+}
+
+/* 結果の数字を大きく表示する */
+.result-number {
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 32px; /* 数字を大きく */
+    font-weight: bold; /* 太字で強調 */
+    color: #4281C8; /* 強調のための色設定 */
+}
+
+/* 全体のコンテナ */
+.judge {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
+    gap: 20px; /* ボックス間の隙間 */
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* 各指標をボックスに入れる */
+.working-condition-box2 {
+    background-color:#f0f8ff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px; /* ボックスの高さを揃える */
+}
+
+.Copyright {
+    position: relative;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
